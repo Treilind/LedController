@@ -70,11 +70,8 @@ public class LedControllerImpl implements LedController {
     }
 
     @Override
-    public void turnOffAllLeds() throws IOException {
-        String[] groupLeds = getGroupLeds();
-        for (int i = 1; i < groupLeds.length - 1; i++) {
-            apiService.communicatePUT(apiService.setURL("setLight",i), "on", "false");
-        }
-
+    public void setLight(int id, String color, boolean state) throws IOException {
+        apiService.communicatePUT(id, color, state);
     }
+
 }
