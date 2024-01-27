@@ -5,6 +5,7 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -23,13 +24,13 @@ public class ApiServiceImpl implements ApiService {
      * @throws IOException Throws if the request could not be completed successfully
      */
     @Override
-    public JSONObject communicate(String link) throws IOException {
+    public JSONObject communicateGET(String link) throws IOException {
         // Connect to the server
         URL url = new URL(link);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         // and send a GET request
         connection.setRequestMethod("GET");
-        connection.setRequestProperty("X-Hasura-Group-ID", "Todo");
+        connection.setRequestProperty("X-Hasura-Group-ID", "e3b0c44298fc1c149afbf4c8996fb");
         // Read the response code
         int responseCode = connection.getResponseCode();
         if (responseCode != HttpURLConnection.HTTP_OK) {
@@ -54,6 +55,35 @@ public class ApiServiceImpl implements ApiService {
     }
 
     @Override
+    public void communicatePUT(String link, String change, String changeTo) throws IOException {
+        // Connect to the server
+        URL url = new URL(link);
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+        connection.setRequestMethod("PUT");
+        connection.setRequestProperty("X-Hasura-Group-ID", "e3b0c44298fc1c149afbf4c8996fb");
+        connection.setRequestProperty("Content-Type", "application/json");
+        connection.setRequestProperty("Accept", "application/json");
+        connection.setDoOutput(true);
+
+        String jsonInputString = "{"+change + ":" + changeTo+"}";
+        try(OutputStream os = connection.getOutputStream()) {
+            byte[] input = jsonInputString.getBytes("utf-8");
+            os.write(input, 0, input.length);
+        }
+
+        try(BufferedReader br = new BufferedReader(
+                new InputStreamReader(connection.getInputStream(), "utf-8"))) {
+            StringBuilder response = new StringBuilder();
+            String responseLine = null;
+            while ((responseLine = br.readLine()) != null) {
+                response.append(responseLine.trim());
+            }
+            System.out.println(response.toString());
+        }
+    }
+
+    @Override
     public String setURL(String method) {
 
         String baseURL = "https://balanced-civet-91.hasura.app/api/rest/";
@@ -64,6 +94,7 @@ public class ApiServiceImpl implements ApiService {
                 break;
             case "getGroupLeds":
                 baseURL += method;
+                break;
         }
 
         return baseURL;
@@ -77,10 +108,14 @@ public class ApiServiceImpl implements ApiService {
             case "getLight":
                 baseURL = baseURL + "lights" + "/" + id;
                 break;
+            case "setLight":
+                baseURL += method;
+                break;
         }
 
         return baseURL;
     }
+
 
 
 }
