@@ -5,7 +5,8 @@ import org.json.JSONObject;
 import java.io.IOException;
 
 public interface ApiService {
-    JSONObject communicate(String url) throws IOException;
+    JSONObject communicateGET(String link) throws IOException;
+    void communicatePUT(String link, String change, String changeTo) throws IOException;
 
     String setURL (String method);
     String setURL (String method, int id);
