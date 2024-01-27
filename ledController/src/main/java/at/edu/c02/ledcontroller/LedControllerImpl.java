@@ -4,6 +4,8 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This class handles the actual logic
@@ -51,7 +53,7 @@ public class LedControllerImpl implements LedController {
 
         JSONObject response = apiService.communicateGET(apiService.setURL("getLights"));
         JSONArray lights = response.getJSONArray("lights");
-        String[] result = new String[lights.length()];
+        List<String> list = new ArrayList<>();
         for (int i = 0; i < lights.length(); i++) {
             JSONObject groupByGroup = lights.getJSONObject(i).getJSONObject("groupByGroup");
             String group = groupByGroup.getString("name");
@@ -62,9 +64,10 @@ public class LedControllerImpl implements LedController {
                 }
                 else status = "on";
                 String id = String.valueOf(lights.getJSONObject(i).getInt("id"))+";"+ status +";"+lights.getJSONObject(i).getString("color");
-                result[i] = id;
+                list.add(id);
             }
         }
+        String [] result = list.toArray(new String[list.size()]);
         return result;
 
     }
