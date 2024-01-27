@@ -13,14 +13,12 @@ import java.util.List;
 public class LedControllerImpl implements LedController {
     private final ApiService apiService;
 
-    public LedControllerImpl(ApiService apiService)
-    {
+    public LedControllerImpl(ApiService apiService) {
         this.apiService = apiService;
     }
 
     @Override
-    public void demo() throws IOException
-    {
+    public void demo() throws IOException {
         // Call `getLights`, the response is a json object in the form `{ "lights": [ { ... }, { ... } ] }`
         JSONObject response = apiService.communicate(apiService.setURL("getLights"));
         // get the "lights" array from the response
@@ -56,13 +54,23 @@ public class LedControllerImpl implements LedController {
         JSONObject response = apiService.communicate("getGroupLeds");
         JSONArray lights = response.getJSONArray("lights");
         String[] result = new String[lights.length()];
-        for (int i = 0; i < result.length-1; i++) {
-            String group = lights.getJSONObject(i).getString("group");
+        for (int i = 0; i < result.length - 1; i++) {
+            String group = lights.getJSONObject(i).getString("name");
             if (group.equals("F")) {
                 result[i] = lights.getJSONObject(i).getString("status");
+
             }
         }
         return result;
+
+    }
+
+    @Override
+    public void turnOffAllLeds() throws IOException {
+        String[] groupLeds = getGroupLeds();
+        for (int i = 1; i < groupLeds.length - 1; i++) {
+            apiService.communicatePUT(apiService.setURL("setLight",i), "on", "false");
+        }
 
     }
 }

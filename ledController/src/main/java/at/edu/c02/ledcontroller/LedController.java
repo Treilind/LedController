@@ -8,4 +8,6 @@ public interface LedController {
     void getLights() throws IOException;
     void getLight(int id) throws IOException;
     String[] getGroupLeds() throws IOException;
+
+    void turnOffAllLeds() throws IOException;
 }
