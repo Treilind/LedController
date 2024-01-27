@@ -62,6 +62,8 @@ public class ApiServiceImpl implements ApiService {
             case "getLights":
                 baseURL = baseURL + method;
                 break;
+            case "getGroupLeds":
+                baseURL += method;
         }
 
         return baseURL;
