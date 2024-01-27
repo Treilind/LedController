@@ -49,14 +49,20 @@ public class LedControllerImpl implements LedController {
 
     public String[] getGroupLeds() throws IOException {
 
-        JSONObject response = apiService.communicateGET("getLights");
+        JSONObject response = apiService.communicateGET(apiService.setURL("getLights"));
         JSONArray lights = response.getJSONArray("lights");
         String[] result = new String[lights.length()];
-        for (int i = 0; i < result.length - 1; i++) {
-            String group = lights.getJSONObject(i).getString("name");
-            if (group.equals("F")) {
-                result[i] = lights.getJSONObject(i).getString("status");
-                System.out.println(result[i]);;
+        for (int i = 0; i < lights.length(); i++) {
+            JSONObject groupByGroup = lights.getJSONObject(i).getJSONObject("groupByGroup");
+            String group = groupByGroup.getString("name");
+            if (group.equalsIgnoreCase("F")){
+                String status = "";
+                if (lights.getJSONObject(i).getBoolean("on") == false){
+                    status = "off";
+                }
+                else status = "on";
+                String id = String.valueOf(lights.getJSONObject(i).getInt("id"))+";"+ status +";"+lights.getJSONObject(i).getString("color");
+                result[i] = id;
             }
         }
         return result;
