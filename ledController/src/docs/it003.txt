@@ -11,3 +11,21 @@ Story 1.2 -> 15 Storypoints
 Story 1.3 -> 5 Storypoints
 Story 2.1 -> 10 Storypoints
 
+Daily 1.0:
+die Arbeit als Gruppe zeigt sich als sinnvoll, es gibt allerdings Syntax Probleme -> diese konnte mit Hilfe der LV Leitung geklärt werden
+aktuell wird nach wie vor an 1.2 gearbeitet
+
+Daily 2.0:
+Story 1.2 ist implementiert und funktioniert
+1.3 ist fast vollständig funktionstüchtig
+es wird weiter an der Implementierung von 2.1 gearbeitet
+
+Retro:
+gemeinsames Arbeiten an den Problemen hat geholfen ans Ziel zu kommen, Mathias möchte nun Tests schreiben
+1.2 und 1.3 konnten vollständig implementiert werden
+bei 1.2 fehlt nach wie vor der Test, dieser wurde bereits im ersten Sprint von Mario erstellt aufgrund von technischen Problemen muss dieser nun aber erneut gecoded werden
+Story 2.1 konnte nicht implementiert werden
+kurze Rücksprache bzgl. der Implementierung von 2.1 mit PO ist notwendig für weitere Vorgehensweise
+somit wurden 17/30 Storypoints erreicht
+
+
