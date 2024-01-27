@@ -55,9 +55,9 @@ public class ApiServiceImpl implements ApiService {
     }
 
     @Override
-    public void communicatePUT(String link, String change, String changeTo) throws IOException {
+    public void communicatePUT(int id, String color, boolean state) throws IOException {
         // Connect to the server
-        URL url = new URL(link);
+        URL url = new URL("https://balanced-civet-91.hasura.app/api/rest/setLight");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
         connection.setRequestMethod("PUT");
@@ -66,7 +66,7 @@ public class ApiServiceImpl implements ApiService {
         connection.setRequestProperty("Accept", "application/json");
         connection.setDoOutput(true);
 
-        String jsonInputString = "{"+change + ":" + changeTo+"}";
+        String jsonInputString = "{ \"id\": \"" +  id + "\", \"color\": \"" + color + "\", \"state\": \"" + state + "\"}";
         try(OutputStream os = connection.getOutputStream()) {
             byte[] input = jsonInputString.getBytes("utf-8");
             os.write(input, 0, input.length);
@@ -82,6 +82,8 @@ public class ApiServiceImpl implements ApiService {
             System.out.println(response.toString());
         }
     }
+
+
 
     @Override
     public String setURL(String method) {
@@ -104,9 +106,6 @@ public class ApiServiceImpl implements ApiService {
         switch (method) {
             case "getLight":
                 baseURL = baseURL + "lights" + "/" + id;
-                break;
-            case "setLight":
-                baseURL += method;
                 break;
         }
 

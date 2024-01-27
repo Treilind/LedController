@@ -53,6 +53,15 @@ public class Main {
                             System.out.println("LED " + split[0] + " is currently " + split[1] + ". Color: " + split[2]);
                     }
                 }
+            } else if (input.equalsIgnoreCase("setLight")) {
+                System.out.println("Welche LED?");
+                String led = reader.readLine();
+                System.out.println("Welche Farbe in Hex Code?");
+                String color = reader.readLine();
+                ledController.setLight(Integer.parseInt(led), color, true);
+                System.out.println("LED erfolgreich gesetzt!");
+            } else if (input.equalsIgnoreCase("turnOffAllLights")){
+                ledController.turnOffAllLeds();
             }
         }
     }
