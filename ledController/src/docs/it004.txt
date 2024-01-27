@@ -1,0 +1,12 @@
+Sprint Planning:
+Mathias übernimmt die Implementierung der Tests
+der Rest arbeitet an Story 2.1
+
+Story 2.1 -> 10 Storypoints
+Test für 1.2 -> 4 Storypoints
+Test für 2.1 -> 6 Storypoints
+Test für 2.2 -> 4 Storypoints
+
+alle Storypoints sollen am Ende erreicht werden
+
+
