@@ -18,3 +18,21 @@ Sprint Planning Epic 1:
 
     1.1 und 1.2 werden als Gruppe erarbeitet um alle entsprechend abzuholen und
     die Richtung in die wir gehen für alle klar zu machen
+
+Daily 1.0:
+Implementierung von Story 1.1 wurde von der Gruppe gemeinsam gestartet und in weitere Folge an Team A (Thorsten + Sandra) für weitere Implementierung übergeben
+Implementierung von Story 1.2 wurde an Team B (Mario + Mathias) übergeben
+Issues sind für die Weiterarbeit erstellt worden
+jeder besitzt das entsprechend notwendige Verständnis für die weiteren Implementierungen
+
+Daily 2.0:
+für Story 1.2 wurde als Rückgabe eine Arraylist gewählt, da man vorab nicht weiß wie groß das Array sein soll
+Mock für API Service wurde implementiert um groupLeds Methode zu Testen -> Branches müssen für den Test noch gemerged werden
+Story 1.1 konnte vollständig von Team A implementiert werden und wurde gepushed
+
+Retro:
+von Syntax und Coding her gab es wenig Probleme, allerdings ist bei Team B nach dem Pull von Implementierung der Story 1.1 ein Merge-Problem aufgetreten, was viel Zeit in Anspruch genommen hat
+Derjenige der die Methode schreibt die getestet werden soll, soll auch die Tests schreiben -> Entscheidung gegen TTD
+Story 1.3 wird auf später verschoben, da es sich "nur" um eine Implementierung in der Main handelt
+Vorab-Einschätzung über Arbeitslast war realistisch durch das Mergen wurde allerdings bei 1.2 viel Zeit verloren
+somit wurden 22/35 Storypoints erreicht -> Story 1.2 wurde nicht vollständig implementiert, Story 1.3 wurde nicht implementiert
