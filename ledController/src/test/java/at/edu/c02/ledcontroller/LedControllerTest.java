@@ -36,6 +36,15 @@ public class LedControllerTest {
 
     }
 
+    @Test
+    public void testSetLight() throws IOException {
+
+        ApiServiceImpl apiService = new ApiServiceImpl();
+        LedControllerImpl ledController = new LedControllerImpl(apiService);
+        ledController.setLight(1,"#eb1a07",true);
+        ledController.setLight(3,"#f2f207",true);
+        ledController.setLight(4,"#46d413",true);
+    }
 
 
 }
