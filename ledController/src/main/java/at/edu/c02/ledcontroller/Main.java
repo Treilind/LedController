@@ -29,6 +29,8 @@ public class Main {
                 System.out.println("Please specify LED ID:");
                 String newInput = reader.readLine();
                 ledController.getLight((Integer.parseInt(newInput)));
+            } else if (input.equalsIgnoreCase("getGroupLeds")){
+                ledController.getGroupLeds();
             }
         }
     }

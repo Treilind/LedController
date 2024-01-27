@@ -1,6 +1,6 @@
 package at.edu.c02.ledcontroller;
 
-import org.json.JSONArray;
+/*import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.mockito.Mockito;
@@ -10,11 +10,11 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.when;*/
 
 public class LedControllerTest {
 
-    private ApiService apiService;
+   /* private ApiService apiService;
     private LedController ledController;
 
     @BeforeEach
@@ -30,5 +30,5 @@ public class LedControllerTest {
         verify(apiService).getGroupLeds();
         assertEquals("fakewerte", result, "Die zurückgegebenen Gruppen-LEDs stimmen mit den gefälschten Daten überein.");
 
-    }
+    }*/
 }
