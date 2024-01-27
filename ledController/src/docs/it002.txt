@@ -30,3 +30,18 @@ Mario ist noch an der Implementierung des Tests
 Team A und B arbeiten aufgrund von inhaltlichen Schwierigeiten gemeinsam an Implementierung von 2.1
 Zeitdruck stellt für beide Teams eine Herausforderung dar
 Secret wurde angefragt und wurde bereits übermittelt
+
+Daily 2.0:
+Kooperation zwischen Team A und B hat zur Implementierung von 2.1 geführt
+Problem bei der Ausführung der Main bei allen Mitgliedern außer Thorsten stellt ein Problem dar -> Abklärung mit LV Leitung übernimmt Sandra
+Test aus Epic 1 ist abgeschlossen
+Story 2.2 ist implementiert und wird geprüft
+
+
+Retro:
+Es wurde keine Implementierung vollständig funktional abgeschlossen
+API Call ist schwierig umzusetzen - daran scheitert aktuell die Vollständigkeit der Implementierung
+Zeitdruck ist enorm und die Einteilung der Tasks ist schwierig, da das Team noch nicht geübt ist und somit nicht eigenständig arbeite kann
+somit gibt es oft Kommunikation und Lösungsansätze von dem gesamten Team, so verliert man allerdings durch Diskussionen Zeit
+technische Probleme auf den Rechnern von Mathias, Mario und Sandra führen zu Frustration -> Ausführung der Main liefert java: Package org.json ist nicht vorhanden
+
