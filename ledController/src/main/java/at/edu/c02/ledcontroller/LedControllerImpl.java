@@ -55,9 +55,11 @@ public class LedControllerImpl implements LedController {
         JSONArray lights = response.getJSONArray("lights");
         String[] result = new String[lights.length()];
         for (int i = 0; i < result.length - 1; i++) {
-            String group = lights.getJSONObject(i).getString("group");
-            result[i] = lights.getJSONObject(i).getString("status");
+            String group = lights.getJSONObject(i).getString("name");
+            if (group.equals("F")) {
+                result[i] = lights.getJSONObject(i).getString("status");
 
+            }
         }
         return result;
 
