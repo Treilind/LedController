@@ -10,4 +10,6 @@ public interface LedController {
     String[] getGroupLeds() throws IOException;
 
     void setLight(int id, String color, boolean state) throws IOException;
+
+    void turnOffAllLeds() throws IOException;
 }

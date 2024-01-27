@@ -60,6 +60,8 @@ public class Main {
                 String color = reader.readLine();
                 ledController.setLight(Integer.parseInt(led), color, true);
                 System.out.println("LED erfolgreich gesetzt!");
+            } else if (input.equalsIgnoreCase("turnOffAllLights")){
+                ledController.turnOffAllLeds();
             }
         }
     }

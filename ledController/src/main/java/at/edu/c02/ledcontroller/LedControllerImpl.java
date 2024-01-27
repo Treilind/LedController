@@ -77,4 +77,16 @@ public class LedControllerImpl implements LedController {
         apiService.communicatePUT(id, color, state);
     }
 
+    @Override
+    public void turnOffAllLeds() throws IOException{
+
+        String[] result = getGroupLeds();
+
+        for (int i = 0; i < result.length; i++) {
+            String[] split = result[i].split(";");
+            apiService.communicatePUT(Integer.parseInt(split[0]), "#000", false);
+        }
+    }
+
+
 }

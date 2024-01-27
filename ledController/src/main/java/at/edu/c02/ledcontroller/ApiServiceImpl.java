@@ -66,7 +66,7 @@ public class ApiServiceImpl implements ApiService {
         connection.setRequestProperty("Accept", "application/json");
         connection.setDoOutput(true);
 
-        String jsonInputString = "{ \"id\": \"" +  id + "\", \"color\": \"" + color + "\", \"state\": \"" + true + "\"}";
+        String jsonInputString = "{ \"id\": \"" +  id + "\", \"color\": \"" + color + "\", \"state\": \"" + state + "\"}";
         try(OutputStream os = connection.getOutputStream()) {
             byte[] input = jsonInputString.getBytes("utf-8");
             os.write(input, 0, input.length);
@@ -82,6 +82,8 @@ public class ApiServiceImpl implements ApiService {
             System.out.println(response.toString());
         }
     }
+
+
 
     @Override
     public String setURL(String method) {
