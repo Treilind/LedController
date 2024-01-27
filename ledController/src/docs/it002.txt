@@ -1,0 +1,32 @@
+Sprint Planning:
+    Test Implementierung aus 1.2 wird von Team B übernommen
+
+    Story 2.1 -> 10 Storypoints
+        ApiService erweitern sodass Farbe und Zustand einer LED gesetzt werden kann
+        Team A übernimmt die Implementierung
+
+    Story 2.2 -> 10 Storypoints
+        LedController um Methode turnOffAllLeds() erweitern die alle LEDs der Gruppe ausschaltet
+        Team B übernimmt die Implementierung
+
+    Story 2.3 -> 15 Storypoints
+        Lauflicht implementieren -> alle Lichter ausschalten, danach im Kreis laufend einschalten
+        Entscheidung über Implementierung je nach Fortschritt im Sprint
+
+    Story 2.4 -> 5 Storypoints
+        Command spinningled in Main implementieren
+        Abhängig von 2.3 und Entscheidung über Implementierung je nach Fortschritt der Implementierung
+
+    Story 2.5 -> 7 Storypoints
+        Command selted in Main implementieren
+        wird von Team A implementiert sobald 2.1 abgeschlossen ist
+
+Schätzung:  Story 2.1, 2.2 und 2.5 kann implementiert werden
+            Implementierung von 2.3 wird als unrealistisch geschätzt, da noch offene Punkte von Epic 1 ausständig sind
+            Story 2.4 wird als "einfach" umsetzbar geschätzt, bietet aber keinen Mehrwert wenn 2.3 nicht abgeschlossen ist
+
+Daily 1.0:
+Mario ist noch an der Implementierung des Tests
+Team A und B arbeiten aufgrund von inhaltlichen Schwierigeiten gemeinsam an Implementierung von 2.1
+Zeitdruck stellt für beide Teams eine Herausforderung dar
+Secret wurde angefragt und wurde bereits übermittelt
