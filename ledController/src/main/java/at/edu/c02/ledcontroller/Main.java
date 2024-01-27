@@ -30,7 +30,29 @@ public class Main {
                 String newInput = reader.readLine();
                 ledController.getLight((Integer.parseInt(newInput)));
             } else if (input.equalsIgnoreCase("getGroupLeds")){
-                ledController.getGroupLeds();
+                String[] result = ledController.getGroupLeds();
+                for (int i = 0; i < result.length; i++) {
+                    System.out.println(result[i]);
+                }
+            } else if(input.equalsIgnoreCase("groupStatus")) {
+                String[] result = ledController.getGroupLeds();
+                for (int i = 0; i < result.length; i++) {
+                    if (result[i] != null){
+                        String[] split = result[i].split(";");
+                        System.out.println("LED " + split[0] + " is currently " + split[1] + ". Color: " + split[2]);
+                    }
+                }
+            } else if (input.equalsIgnoreCase("status")){
+                System.out.println("Please specify LED ID:");
+                String newInput = reader.readLine();
+                String[] result = ledController.getGroupLeds();
+                for (int i = 0; i < result.length; i++) {
+                    if (result[i] != null){
+                        String[] split = result[i].split(";");
+                        if (split[0].equals(newInput))
+                            System.out.println("LED " + split[0] + " is currently " + split[1] + ". Color: " + split[2]);
+                    }
+                }
             }
         }
     }
