@@ -1,0 +1,13 @@
+Sprint Planning:
+da ein Rückstand in den Epics herrscht sehen wir es als unrealistisch Epic 3 im Sprint Planning aufzunehmen
+von jetzt an wird nur mehr auf einem Gerät gemeinsam programmiert, da das Programm nur auf dem Gerät von Thorsten fehlerfrei lauft
+erst wird an 1.2 mit Test gearbeitet
+danach geht der Fokus auf 1.3
+das Ziel ist zum Schluss auch 2.1 optional mit Test vollständig funktional implementiert zu haben
+
+Storypoints die am Ende erreicht werden sollen :
+
+Story 1.2 -> 15 Storypoints
+Story 1.3 -> 5 Storypoints
+Story 2.1 -> 10 Storypoints
+
