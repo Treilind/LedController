@@ -9,4 +9,36 @@ Test für 2.2 -> 4 Storypoints
 
 alle Storypoints sollen am Ende erreicht werden
 
+Daily 1.0:
+Test für 1.2 ist fertig -> Matthias arbeitet an den beiden anderen Tests weiter
+2.1 konnte implementiert werden sodass die LEDs welche man anspricht in der entsprechenden Farbe leuchten
+Thorsten arbeitet nun an Story 2.5 an der Abfrage auf der Konsole an den User welche LEDs gesetzt werden sollen
+
+Daily 2.0:
+2.5 ist von Thorsten implementiert
+1.2 inkl Test abgeschlossen
+2.1 inkl Test abgeschlossen
+2.2 wird von Thorsten erarbeitet -> danach startet Mathias mit dem Test
+Freude in der Gruppe ist groß, da die LEDs am Beamer leuchten :-)
+
+Retro:
+Motivation ist gestiegen nachdem das erste Licht geleuchtet hat und es konnten somit auch mehr Stories als ursprünglich geplant umgesetzt werden
+in diesem Sprint wurden 20/24 Storypoints erreicht
+
+
+folgende Stories konnten im Verlauf der gesamten Übung abgeschlossen und released werden:
+1.1
+1.2 inkl. Test
+1.3
+2.1 inkl. Test
+2.2 inkl. Test
+2.5
+
+
+
+
+
+
+
+
 
